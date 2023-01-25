@@ -18,23 +18,23 @@ class MyClient(discord.Client):
         msg = message.content.lower()
 
         if "quoi" in msg:
-            await message.channel.send("FEUR !")
+            await message.reply("FEUR !")
 
         if msg.startswith("oui") or msg.endswith("oui"):
-            await message.channel.send("Fi !")
+            await message.reply("Fi !")
         
         if msg.startswith("non") or msg.endswith("non"):
-            await message.channel.send("Bril !")
+            await message.reply("Bril !")
 
         if "di" in msg:
             list_di_word = re.findall(r'di\w*',msg)
             for word in list_di_word:
                 if len(word) > 4:
-                    await message.channel.send(word[2:] + " !")
+                    await message.reply(word[2:] + " !")
 
         if msg.startswith("!help"):
             txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
-            await message.channel.send(txt)
+            await message.reply(txt)
 
 def main():          
     TOKEN = os.getenv("TOKEN")
