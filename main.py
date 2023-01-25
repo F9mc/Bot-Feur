@@ -16,7 +16,7 @@ class MyClient(discord.Client):
             return
 
         if "quoi" in message.content:
-            await message.channel.send("-FEUR")
+            await message.channel.send("FEUR !")
 
 def main():          
     load_dotenv()
