@@ -2,6 +2,7 @@ from pip import main
 import discord
 import os
 import re
+import requests
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -30,6 +31,10 @@ class MyClient(discord.Client):
             for word in list_di_word:
                 if len(word) > 4:
                     await message.channel.send(word[2:] + " !")
+
+        if msg.startswith("!help"):
+            txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
+            await message.channel.send(txt)
 
 def main():          
     TOKEN = os.getenv("TOKEN")
