@@ -1,6 +1,7 @@
 from pip import main
 import discord
 import os
+import re
 from dotenv import load_dotenv
 
 class MyClient(discord.Client):
@@ -14,14 +15,22 @@ class MyClient(discord.Client):
         if message.author.id == self.user.id:
             return
 
-        if "quoi" in message.content.lower():
+        msg = message.content.lower()
+
+        if "quoi" in msg:
             await message.channel.send("FEUR !")
 
-        if message.content.lower() == "oui":
+        if msg == "oui":
             await message.channel.send("Fi !")
         
-        if message.content.lower() == "non":
+        if msg == "non":
             await message.channel.send("Bril !")
+
+        if "di" in msg:
+            list_di_word = re.findall(r'di\w*',msg)
+            for word in list_di_word:
+                if len(word) > 4:
+                    await message.channel.send(word[2:] + " !")
 
 def main():          
     load_dotenv()
