@@ -12,11 +12,16 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         if message.author.id == self.user.id:
-            print("[>] pass...")
             return
 
-        if "quoi" in message.content:
+        if "quoi" in message.content.lower():
             await message.channel.send("FEUR !")
+
+        if message.content.lower() == "oui":
+            await message.channel.send("Fi !")
+        
+        if message.content.lower() == "non":
+            await message.channel.send("Bril !")
 
 def main():          
     load_dotenv()
