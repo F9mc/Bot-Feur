@@ -2,7 +2,6 @@ from pip import main
 import discord
 import os
 import re
-from dotenv import load_dotenv
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -33,7 +32,6 @@ class MyClient(discord.Client):
                     await message.channel.send(word[2:] + " !")
 
 def main():          
-    load_dotenv()
     TOKEN = os.getenv("TOKEN")
 
     client = MyClient()
