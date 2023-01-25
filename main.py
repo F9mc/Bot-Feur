@@ -20,10 +20,10 @@ class MyClient(discord.Client):
         if "quoi" in msg:
             await message.channel.send("FEUR !")
 
-        if msg == "oui":
+        if msg.startswith("oui") or msg.endswith("oui"):
             await message.channel.send("Fi !")
         
-        if msg == "non":
+        if msg.startswith("non") or msg.endswith("non"):
             await message.channel.send("Bril !")
 
         if "di" in msg:
