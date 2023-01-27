@@ -33,8 +33,6 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
-    - name: Stop Previous Docker Image
-      run: docker stop bot-feur-runner
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag bot-feur
     - name: Run the Docker image
