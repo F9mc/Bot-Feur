@@ -36,4 +36,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag bot-feur
     - name: Run the Docker image
-      run: docker run -tdi --name bot-feur-runner --env TOKEN=${{ secrets.DISCORD_TOKEN }} bot-feur
+      run: docker run --name bot-feur-runner --env TOKEN=${{ secrets.DISCORD_TOKEN }} bot-feur
