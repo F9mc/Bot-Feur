@@ -33,9 +33,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: stop container
-      run: docker stop $(docker ps -aq) 
+      run: docker stop $(docker ps -aq) 2> /dev/null
     - name: rm container
-      run: docker rm $(docker ps -aq)
+      run: docker rm $(docker ps -aq) 2> /dev/null
 
   deploy:
     needs: [set-up-runner]
