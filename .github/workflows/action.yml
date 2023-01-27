@@ -31,6 +31,7 @@ jobs:
   deploy:
     needs: [docker-push]
     runs-on: self-hosted
+    options: --privileged
     steps:
     - uses: actions/checkout@v3
     - name: Stop Previous Docker Image
