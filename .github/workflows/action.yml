@@ -33,6 +33,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-       run: docker build . --file Dockerfile --tag bot-feur-image:$(date +%s)
+       run: docker build . --file Dockerfile bot-feur-image:$(date +%s)
     - name: Run the Docker Container
        run: docker run --name deploy-$(date +%s) --env TOKEN=secrets.DISCORD_TOKEN bot-feur-image:$(date +%s)
