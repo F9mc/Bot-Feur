@@ -37,12 +37,15 @@ class MyClient(discord.Client):
             txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
             await message.reply(txt)
         else: # Discord HTTP status code 
-            codeListe=list(HTTPStatus)
             """
             https://docs.python.org/3/library/http.html
             list(HTTPStatus)
             print(print(val[0].value))
             """
+
+            
+            codeListe=list(HTTPStatus)
+            
             pass
 
 def main():          
