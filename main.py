@@ -3,6 +3,7 @@ import discord
 import os
 import re
 import requests
+from http import HTTPStatus
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -35,7 +36,12 @@ class MyClient(discord.Client):
         elif msg.startswith("!help"):
             txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
             await message.reply(txt)
-        else: # Discord HTTP status code
+        else: # Discord HTTP status code 
+            """
+            https://docs.python.org/3/library/http.html
+            list(HTTPStatus)
+            print(print(val[0].value))
+            """
             pass
 
 def main():          
