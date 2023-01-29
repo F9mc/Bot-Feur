@@ -35,6 +35,8 @@ class MyClient(discord.Client):
         elif msg.startswith("!help"):
             txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
             await message.reply(txt)
+        else: # Discord HTTP status code
+            pass
 
 def main():          
     TOKEN = os.getenv("TOKEN")
