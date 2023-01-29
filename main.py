@@ -20,19 +20,19 @@ class MyClient(discord.Client):
         if "quoi" in msg:
             await message.reply("FEUR !")
 
-        if msg.startswith("oui") or msg.endswith("oui"):
+        elif msg.startswith("oui") or msg.endswith("oui"):
             await message.reply("Fi !")
         
-        if msg.startswith("non") or msg.endswith("non"):
+        elif msg.startswith("non") or msg.endswith("non"):
             await message.reply("Bril !")
 
-        if "di" in msg:
+        elif "di" in msg:
             list_di_word = re.findall(r'di\w*',msg)
             for word in list_di_word:
                 if len(word) > 4:
                     await message.reply(word[2:] + " !")
 
-        if msg.startswith("!help"):
+        elif msg.startswith("!help"):
             txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
             await message.reply(txt)
 
