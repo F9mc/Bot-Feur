@@ -30,9 +30,8 @@ jobs:
 
   deploy:
     runs-on: self-hosted
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-       run: docker build . --file Dockerfile bot-feur-image:$(date +%s)
-    - name: Run the Docker Container
-       run: docker run --name deploy-$(date +%s) --env TOKEN=secrets.DISCORD_TOKEN bot-feur-image:$(date +%s)
+    runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+      - ${{ secrets.DISCORD_TOKEN }}
