@@ -1,4 +1,3 @@
-
 name: Docker Hub Push
 
 on:
@@ -28,10 +27,23 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_REPO }}
 
-  deploy:
+  set-up-runner:
     runs-on: self-hosted
-    runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
-      - ${{ secrets.DISCORD_TOKEN }}
+    steps:
+    - uses: actions/checkout@v3
+    - name: stop container
+      run: docker stop $(docker ps -aq) 
+      continue-on-error: true
+    - name: rm container
+      run: docker rm $(docker ps -aq)
+      continue-on-error: true
+
+  deploy:
+    needs: [set-up-runner]
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag bot-feur
+    - name: Run the Docker image
+      run: docker run --name bot-feur-runner --env TOKEN=${{ secrets.DISCORD_TOKEN }} bot-feur
