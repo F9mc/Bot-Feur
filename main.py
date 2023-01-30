@@ -16,14 +16,15 @@ class MyClient(discord.Client):
             return
 
         msg = message.content.lower()
+        words = msg.split(" ")
 
-        if "quoi" in msg:
+        if "quoi" in words:
             await message.reply("FEUR !")
 
-        if msg.startswith("oui") or msg.endswith("oui"):
+        if "oui" in words:
             await message.reply("Fi !")
         
-        if msg.startswith("non") or msg.endswith("non"):
+        if "non" in words:
             await message.reply("Bril !")
 
         if "di" in msg:
