@@ -1,4 +1,4 @@
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Efrei-Paul/Bot-Feur)
+![GitHub release](https://img.shields.io/github/v/release/Efrei-Paul/Bot-Feur)
 ![GitHub license](https://img.shields.io/github/license/Efrei-Paul/Bot-Feur)
 ![GitHub issues](https://img.shields.io/github/issues/Efrei-Paul/Bot-Feur)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Efrei-Paul/Bot-Feur)
