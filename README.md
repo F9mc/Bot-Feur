@@ -22,8 +22,10 @@ Il faut specifier la variable d'environement **TOKEN** avec le token de votre bo
     D{Bot-Feur}---non-->bril-->c{Plaisir infini}
     D{Bot-Feur}---quoi-->feur-->c{Plaisir infini}
     D{Bot-Feur}---di*-->*-->c{Plaisir infini}
-    D{Bot-Feur}---mdr-->b(Reaction :rofl:)-->c{Plaisir infini}
-    D{Bot-Feur}---e[xD]-->b(Reaction :rofl:)-->c{Plaisir infini}
+    D{Bot-Feur}---mdr-->b(Reaction :rofl:)
+    D{Bot-Feur}---e[xD]-->b(Reaction :rofl:)
+    b(Reaction :rofl:)-->c{Plaisir infini}
+    
 ```
 
 ## FAQ
