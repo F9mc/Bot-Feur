@@ -12,7 +12,7 @@
 
 Il faut specifier la variable d'environement **TOKEN** avec le token de votre bot.
 
-### Graph
+### Graph
 
 ```mermaid
     graph TB
