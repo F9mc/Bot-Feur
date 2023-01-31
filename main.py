@@ -36,6 +36,9 @@ class MyClient(discord.Client):
         if "mdr" in msg or "xd" in msg:
             await message.add_reaction("🤣")
 
+        if len(msg) > 280:
+            await message.reply(f"Attention, ton message fait {len(msg)} caractères ! Il ne tiendrait pas dans un tweet.")
+
         if msg.startswith("!help"):
             txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
             await message.reply(txt)
