@@ -33,7 +33,7 @@ class MyClient(discord.Client):
                 if len(word) > 4:
                     await message.reply(word[2:] + " !")
 
-        if "mdr" in msg:
+        if "mdr" in msg or "xd" in msg:
             await message.add_reaction("🤣")
 
         if msg.startswith("!help"):
