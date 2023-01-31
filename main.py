@@ -33,6 +33,9 @@ class MyClient(discord.Client):
                 if len(word) > 4:
                     await message.reply(word[2:] + " !")
 
+        if "mdr" in msg:
+            await message.add_reaction("🤣")
+
         if msg.startswith("!help"):
             txt = requests.get("https://raw.githubusercontent.com/Efrei-Paul/Bot-Feur/main/README.md").text
             await message.reply(txt)
