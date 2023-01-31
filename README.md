@@ -2,6 +2,8 @@
 ![GitHub license](https://img.shields.io/github/license/Efrei-Paul/Bot-Feur)
 ![GitHub issues](https://img.shields.io/github/issues/Efrei-Paul/Bot-Feur)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Efrei-Paul/Bot-Feur)
+![Docker Pulls](https://img.shields.io/docker/pulls/efreipaul/bot-feur)
+![Docker Image Size](https://img.shields.io/docker/image-size/efreipaul/bot-feur)
 
 # Bot-Feur
 [Add to discord](https://discord.com/api/oauth2/authorize?client_id=958447495913013258&permissions=137439370304&scope=bot%20applications.commands)
@@ -33,5 +35,6 @@ Il faut specifier la variable d'environement **TOKEN** avec le token de votre bo
 
 I would like greatfully to thank:
 
-- [Discord.py Documentations](discordpy.readthedocs.io)
-- [Choose an open source license](https://choosealicense.com/)
+- [Discord.py Documentations](discordpy.readthedocs.io) for the docs
+- [Choose an open source license](https://choosealicense.com/) for the license
+- [Shield.id](https://shields.io/) for the bages
