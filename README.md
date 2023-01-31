@@ -1,7 +1,7 @@
-![GitHub release](https://img.shields.io/github/v/release/Efrei-Paul/Bot-Feur)
-![GitHub license](https://img.shields.io/github/license/Efrei-Paul/Bot-Feur)
-![GitHub issues](https://img.shields.io/github/issues/Efrei-Paul/Bot-Feur)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Efrei-Paul/Bot-Feur)
+![GitHub release](https://img.shields.io/github/v/release/F9mc/Bot-Feur)
+![GitHub license](https://img.shields.io/github/license/F9mc/Bot-Feur)
+![GitHub issues](https://img.shields.io/github/issues/F9mc/Bot-Feur)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/F9mc/Bot-Feur)
 ![Docker Pulls](https://img.shields.io/docker/pulls/efreipaul/bot-feur)
 ![Docker Image Size](https://img.shields.io/docker/image-size/efreipaul/bot-feur)
 
