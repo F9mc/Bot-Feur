@@ -31,7 +31,6 @@ Il faut specifier la variable d'environement **TOKEN** avec le token de votre bo
 ## FAQ
 
 > Q: Il fait quoi ce bot ?
- 
 > R: Il fait feur
 
 ## Acknowledgments
