@@ -6,6 +6,10 @@
 ![Docker Image Size](https://img.shields.io/docker/image-size/efreipaul/bot-feur)
 
 # Bot-Feur
+
+Pour plus d'information : voir la [FAQ](#FAQ)
+
+## Socials
 [Add to discord](https://discord.com/api/oauth2/authorize?client_id=958447495913013258&permissions=137439370304&scope=bot%20applications.commands)
 
 [DockerHub](https://hub.docker.com/repository/docker/efreipaul/bot-feur/general)
